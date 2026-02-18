@@ -1,4 +1,6 @@
 #include <fstream>
+#include "system.h"
+#include "disk.h"
 //HINT: COMPLETE THE INCLUDE STATEMENT
 
 System::System(int N, double displacement,double radius, double boxSize, int seed) {
@@ -53,6 +55,12 @@ void System::enforceBoundaries(Disk & disk) {
     }
 
 // HINT: PROVIDE A DEFINITION FOR A MEMBER FUNCTION OF THE SYSTEM CLASS CALLED uniform
+double System::uniform(double min,double max)
+{
+    std::uniform_real_distribution<double> distribution (min, max);
+    return distribution(gen);
+
+}
 
 void System::save(const std::string &filename){
     // save state of disks to file
