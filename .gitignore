@@ -1,5 +1,8 @@
-# Ignore the confs file
-confs\
+# Ignore the confs file (I had the incorrect '/' Haiyaahhh)
+confs/ 
 
 #Ignore DS_Store
 .DS_Store
+
+#Ingnore the executable file
+program.exe
