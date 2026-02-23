@@ -6,7 +6,7 @@
 System::System(int N, double displacement,double radius, double boxSize, int seed) {
 
         this->boxSize= boxSize;
-        this->  dist = std::uniform_real_distribution<double>(0, 1);
+        this->dist = std::uniform_real_distribution<double>(0, 1);
         this->displacement=displacement;
         gen = std::mt19937(seed);
         
@@ -57,8 +57,7 @@ void System::enforceBoundaries(Disk & disk) {
 // HINT: PROVIDE A DEFINITION FOR A MEMBER FUNCTION OF THE SYSTEM CLASS CALLED uniform
 double System::uniform(double min,double max)
 {
-    std::uniform_real_distribution<double> distribution (min, max);
-    return distribution(gen);
+    return (dist(gen) * (max-min) + min); //dist(gen) is [0-1] Uniform number. We scale it to be between min and max
 
 }
 
