@@ -4,5 +4,5 @@ confs/
 #Ignore DS_Store
 .DS_Store
 
-#Ingnore the executable file
+#Ignore the executable file
 program.exe
