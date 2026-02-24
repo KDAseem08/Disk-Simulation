@@ -19,10 +19,15 @@ as well as using the help from refman.pdf file.
 
 **Running the code**: 
 
-1. Clone the repo: 
-```git clone https://github.com/KDAseem08/Disk-Simulation.git
+1. Clone the repo:
+````
+git clone https://github.com/KDAseem08/Disk-Simulation.git
 ```
-2. Navigate to the project directory for eg ```cd Disk-Simulation```
+
+2. Navigate to the project directory for eg:
+ ``` 
+ cd Disk-Simulation
+ ```
 
 3. Compile the code : ``` mingw32-make -f MakeFile ``
 
