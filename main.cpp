@@ -15,7 +15,7 @@ int main(int argc,char* argv[]) {
     // number of disks (default)
     int N = 20;
     double maxDisplacement  = 0.6;
-    double dt = 0.5;
+    double radius = 0.5;
     double L = 20.0;
 
 
@@ -23,7 +23,7 @@ int main(int argc,char* argv[]) {
         // extra 4 args are correctly provided (0th arg is the program executable)
         N = std::stoi(argv[1]);
         maxDisplacement = std::stod(argv[2]);
-        dt = std::stod(argv[3]);
+        radius = std::stod(argv[3]);
         L = std::stod(argv[4]);
 
     }
@@ -34,7 +34,7 @@ int main(int argc,char* argv[]) {
         return 1; // exit
     }
     // initialise the system
-    System system(N, maxDisplacement,dt,L,1234);
+    System system(N, maxDisplacement,radius,L,1234);
 
     // total number of iterations
     int iterations = N*500;
