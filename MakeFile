@@ -1,0 +1,16 @@
+.RECIPEPREFIX := > #This handles the tab in Windows
+
+#Compile argument which includes all files
+all: main.cpp system.cpp disk.cpp 
+> g++ main.cpp system.cpp disk.cpp -o program.exe
+
+#To run the executable (I delete confs first because they may )
+run: all
+> rm -rf confs
+> mkdir -p confs
+> ./program.exe $(ARGS)
+
+clean:
+> rm -f program.exe
+
+.PHONY: all run clean
